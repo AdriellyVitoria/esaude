@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="cadastro_paciente">
+    <p>Cadastro</p>
+    <p>Informações Pessoais</p>
+    <form class="dados_pessoais" [formGroup]="cadastro">
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome" type="text">
+        <mat-error>Nome é obrigatório</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput formControlName="sobrenome" type="text">
+        <mat-error>Sobrenome é obrigatório</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email">
+        <mat-error>Email é obrigatório</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Telefone</mat-label>
+        <input matInput formControlName="telefone" type="tel">
+        <mat-error>Telefone é obrigatório</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>CPF</mat-label>
+        <input matInput formControlName="cpf" type="text">
+        <mat-error>CPF é obrigatório</mat-error>
+      </mat-form-field>
+    </form>
+
+    <p>Endereço</p>
+    <form class="endereco">
+      <mat-form-field appearance="outline">
+        <mat-label>CEP</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Rua</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Bairro</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Número</mat-label>
+        <input matInput type="number">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Cidade</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Estado</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Complemento</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </form>
+    <div class="botoes">
+      <button mat-flat-button>Cadastrar</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 96px;
+  background-color: #fff;
+  position: sticky;
+  min-height: 40h;
+  .nome_clinica {
+    color: #006C5B;
+  }
+}

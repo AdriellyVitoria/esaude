@@ -1,0 +1,104 @@
+
+<div class="seus-dados">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Ver </mat-panel-title>
+      <mat-panel-description>
+        Seus Dados {{panelOpenState() ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p><strong>Nome</strong></p>
+    <p>{{ dadosPessoais.nome }}</p>
+    <p><strong>Sobrenome</strong></p>
+    <p>{{ dadosPessoais.sobrenome }}</p>
+    <p><strong>CPF</strong></p>
+    <p>{{ dadosPessoais.cpf }}</p>
+    <p><strong>E-mail</strong></p>
+    <p>{{ dadosPessoais.email }}</p>
+    <p><strong>Telefone</strong></p>
+    <p>{{ dadosPessoais.telefone }}</p>
+    <p><strong>CEP</strong></p>
+    <p>{{ dadosPessoais.cep }}</p>
+    <p><strong>Rua</strong></p>
+    <p>{{ dadosPessoais.rua }}</p>
+    <p><strong>Número</strong></p>
+    <p>{{ dadosPessoais.numero }}</p>
+    <p><strong>Bairro</strong></p>
+    <p>{{ dadosPessoais.bairro }}</p>
+    <button mat-flat-button class="botao">Editar</button>
+  </mat-expansion-panel>
+  <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Ver </mat-panel-title>
+      <mat-panel-description>
+        Seus Dados {{panelOpenState() ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Próxima consulta</p>
+    @for (retorno of retornos; track $index) {
+      <div class="historico-consultas">
+        <div class="cabecalho-consulta">
+          <p>Consulta {{ retorno.id}}</p>
+          <p>Especialidade <span>{{ retorno.especialidade}}</span></p>
+          <p>Médico <span>{{retorno.medico}}</span></p>
+          <button mat-flat-button class="botao">Remarcar</button>
+          <button mat-flat-button class="botao" color="warn">Cancelar</button>
+          <mat-divider></mat-divider>
+        </div>
+        <div class="corpo-consulta">
+          <ul>
+            <li>
+              Consulta Inicial em <span>{{retorno.data}}</span>
+                ás <span>{{retorno.hora}}</span>
+            </li>
+            <li>
+              <span>{{retorno.documentos}}</span>
+            </li>
+          </ul>
+          <button mat-flat-button class="botao">Inserir documentação</button>
+        </div>
+      </div>
+    } @empty {
+      <p class="lista-vazia">Próxima consulta tá vázio</p>
+    }
+
+    <p>Histórico de consultas</p>
+    @for (consulta of listaConsultas; track $index) {
+        <div class="cabecalho-consulta">
+          <p>Consulta {{ consulta.id}}</p>
+          <p>Especialidade <span>{{ consulta.especialidade}}</span></p>
+          <p>Médico <span>{{consulta.medico}}</span></p>
+          <mat-divider></mat-divider>
+        </div>
+        <div class="corpo-consulta">
+          <ul>
+            <li>
+              Consulta Inicial em <span>{{consulta.data}}</span>
+                ás <span>{{consulta.hora}}</span>
+            </li>
+            <li>
+              <span>{{consulta.documentos}}</span>
+            </li>
+          </ul>
+          <button mat-flat-button class="botao">Inserir documentação</button>
+        </div>
+      }
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+      <mat-expansion-panel-header>
+        <mat-panel-title> Ver </mat-panel-title>
+        <mat-panel-description>
+          Seus Dados {{panelOpenState() ? 'open' : 'closed'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <strong>Documentação das consultas</strong>
+      @for (documento of documentos; track $index) {
+        <ul>
+          <li><span>{{documento.documentos}}</span> <br> de consulta 0001 - {{documento.data}}</li>
+        </ul>
+      }
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
