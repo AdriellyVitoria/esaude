@@ -8,7 +8,6 @@ import { FichaMedicaComponent } from './paginas/clinica/ficha-medica/ficha-medic
 import { CadastroPacienteComponent } from './paginas/clinica/cadastro-paciente/cadastro-paciente.component';
 import { AgendamentoComponent } from './paginas/clinica/agendamento/agendamento.component';
 
-
 export const routes: Routes = [
   {
     path: '',
@@ -36,12 +35,12 @@ export const routes: Routes = [
       },
       {
         path: 'cadastro',
-        component:  CadastroPacienteComponent
+        component: CadastroPacienteComponent
       },
       {
         path: 'agendamento',
         component: AgendamentoComponent
-      },
+      }
     ]
   }
 ];

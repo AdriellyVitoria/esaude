@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Agendamento } from '../../../core/modelos/agendamento';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { Dialog } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-home',
@@ -68,7 +69,8 @@ export class HomeComponent {
 
   constructor(
     private pacienteService: PacienteService,
-    private readonly router: Router
+    private readonly router: Router,
+    private dialog: Dialog
   ) { }
 
   recusarNotificacao(idNotificacao: number | undefined) {

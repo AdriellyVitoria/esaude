@@ -5,7 +5,7 @@
     <mat-expansion-panel-header>
       <mat-panel-title> Ver </mat-panel-title>
       <mat-panel-description>
-        Seus Dados {{panelOpenState() ? 'open' : 'closed'}}
+        Seus Dados Pessoais 
       </mat-panel-description>
     </mat-expansion-panel-header>
     <p><strong>Nome</strong></p>
@@ -32,7 +32,7 @@
     <mat-expansion-panel-header>
       <mat-panel-title> Ver </mat-panel-title>
       <mat-panel-description>
-        Seus Dados {{panelOpenState() ? 'open' : 'closed'}}
+       Históricos de Consultas
       </mat-panel-description>
     </mat-expansion-panel-header>
     <p>Próxima consulta</p>
@@ -42,7 +42,6 @@
           <p>Consulta {{ retorno.id}}</p>
           <p>Especialidade <span>{{ retorno.especialidade}}</span></p>
           <p>Médico <span>{{retorno.medico}}</span></p>
-          <button mat-flat-button class="botao">Remarcar</button>
           <button mat-flat-button class="botao" color="warn">Cancelar</button>
           <mat-divider></mat-divider>
         </div>
@@ -90,7 +89,7 @@
       <mat-expansion-panel-header>
         <mat-panel-title> Ver </mat-panel-title>
         <mat-panel-description>
-          Seus Dados {{panelOpenState() ? 'open' : 'closed'}}
+        Seus Exames/laudos
         </mat-panel-description>
       </mat-expansion-panel-header>
       <strong>Documentação das consultas</strong>
